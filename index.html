@@ -1,58 +1,86 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            My Portifolio
-        </title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yoon Pa Pa Portfolio</title>
 
-        <style>
-            body {
-                    font-family: Arial, Helvetica, sans-serif;
-                    margin: 0;
-                    background: #f4f4f4;
-                    color: #333;
-            }
+    <style>
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
 
-            header{
-                background: #222;
-                color: #fff;
-                text-align: center;
-                padding: 40px 0;
-            }
+        .profile_img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%; /* full circle */
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 20px;
+        }
 
-            .profile_img{
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 3px solid white;
-                margin-bottom: 15px;
-            }
+        header h1 {
+            margin: 10px 0 5px 0;
+            font-size: 2.5em;
+        }
 
-            section{
-                background: #fff;
-                margin: 20px;
-                padding: 20px;
-                border-radius: 8px;
-            }
-        </style>
-    </head>
+        header p {
+            font-size: 1.2em;
+            margin: 0;
+        }
 
-    <body>
-        <header>
-            <img src="g.jpg" class="Profile-img">
-            <h1>Yoon Pa Pa</h1>
-            <p>Data Analyst</p>
-        </header>
+        
+        section {
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 25px 20px;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
-        <section class="about">
-            <h2>About Me</h2>
-            <p>My name is Yoon Pa Pa.I am a student of University of Computer Studies(Pyay)</p>
-        </section>
+        section h2 {
+            margin-top: 0;
+            color: #222;
+        }
+        
+        
+        a {
+            color: #222;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-        <section class="contact">
-            <h2>Contact</h2>
-            <p>Email:pyoon7774@gmail.com</p>
-        </section>
-    </body>
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="g.jpg" class="profile_img" alt="Profile Photo">
+        <h1>Yoon Pa Pa</h1>
+        <p>Computer Science Student</p>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hello! My name is Yoon Pa Pa. I am a student at the University of Computer Studies (Pyay). I am passionate about Java, Python, and Machine Learning. I enjoy creating projects that combine programming with problem-solving and creativity.</p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="pyoon7774@gmail.com">pyoon7774@gmail.com</a></p>
+    </section>
+</body>
 </html>
