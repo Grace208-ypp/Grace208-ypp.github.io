@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+* {
+  box-sizing: border-box;margin: 0;
+}
+
+body {
+  background-color: lightblue;
+}
+
+  /*    navbar css codes start*/
+
+    #navbar{
+      overflow: hidden;z-index: 100;
+    }
+    #navbar a{
+      color: black;
+      text-align: center;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color.5s;
+      margin: 0;
+    }
+    #navbar a:hover{
+      color:red;
+    }
+
+    .sticky{
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+
+
+/*    navbar css codes end*/
+
+/*image fade in fade out start*/
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 220px;
+  height: 150px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+/*img fade in fade out end*/
+
+/*show more start*/
+  #moreText,#moreText2, #moreText3, #moreText4, #moreText5, #moreText6, #moreText7, #moreText8{
+            /* Display nothing for the element */
+            display: none;
+        }
+
+  #textButton, #textButton2, #textButton3, #textButton4, #textButton5, #textButton6, #textButton7, #textButton8{
+    margin-top:10px ;
+  }
+
+/*show more end*/
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/*footer start*/
+
+  #footer{
+          background:#8da6c2;
+          margin-left: 0px; margin-right: 0;
+          color: black;
+        }
+
+        .tb{
+          text-shadow: 1px 4px 6px gray;
+          border-spacing: 20px;
+        }
+        .tb a{
+          text-decoration: none;
+          color: navy;
+        }
+
+        .tb img{
+          width: 25px;
+          height: 25px;
+        }
+
+    td, th{
+      padding: 50px;
+    }
+
+    #cpyfoot{
+      background: gray;
+      color: black;
+      padding: 10px;
+      text-align: center;
+    }
+    
+/*  footer end*/
+</style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+	 <!-- top menu bar start -->
+  <nav id="top">
+
+    <div style="background-color: rgba(255,255,255,0.3); padding: 20px;"  id="navbar"><b style="color: black;font-size: 40px;text-shadow: 1px 3px 5px gray;font-family: 'Changa', sans-serif; ">REST & LEISURE</b>
+      <div style="float:right;padding: 20px;">
+        <a href="home.html" title="Go To Our Home Page">Home |&nbsp;&nbsp;</a>
+        <a href="hotels.html">Hotels&Resorts |&nbsp;&nbsp;</a>
+        <a href="login.html">Login |&nbsp;&nbsp;</a>
+        <a href="register.html">Register |&nbsp;&nbsp;</a>
+        <a href="aboutus.html" >About Us |&nbsp;&nbsp;</a>
+        </div>
+    </div>
+    
+
+  </nav>
+  <!-- top  menu bar end -->
+
+<!-- MAIN (Center website) -->
+<div  class="main" style="margin-top: 120px;">
+
+<h1>Hotels in Dawei</h1>
+<hr size="10">
+  <i style="font-size:19px;line-height: 45px;font-weight: bold;">
+  Dawei is a city in south-eastern Myanmar and is the capital of the Tanintharyi Region, formerly known as the Tenasserim Division, on the northern bank of the Dawei River. The city is about 614.3 km southeast of Yangon. Its population is 146,964. 
+</i>
+
+
+<!-- Portfolio Gallery Grid -->
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/crown1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/crown2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText()" id="textButton">Show More</button>
+      <h3>Diamond Crown Hotel</h3>
+      <p>
+        <span id="points">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText">Very good hotel, especially due to very friendly and helpful staff (free upgrade). It's a real pleasure to have excellent breakfast on rooftop. Rooms (superior) are clean and spacious with balcony. The best hotel in Dawei.<br>
+               <i class="material-icons">room</i><b>No.651,Yay Road,Myauk Ywar Quarter,Dawei,Myanmar,11111.</b> <br><br>
+             
+                        <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 10,5026</b><br>
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/nons.jpg" alt="icon" width="30" height="25">Non-smoking rooms<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> --> 
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/light1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/light2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+            <button onclick="toggleText2()" id="textButton2">Show More</button>
+       <h3>New Light Hotel</h3>
+      <p>
+        <span id="points2">...</span>
+          <b style="color:gold;">&star;</b><span id="moreText2">The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please.<br>
+          <i class="material-icons">room</i><b>National Highway 8,Dawei,Dawei,Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 125,064 <b>per night</b><br>
+                        <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 112,557 <b>1 night, 2 adults[include taxes and charges]</b><br>
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/nons.jpg" alt="icon" width="30" height="25">Non-smoking rooms<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> --> 
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/gguest1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/gguest2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText3()" id="textButton3">Show More</button>
+       <h3>Golden Guest Hotel</h3>
+      <p>
+        <span id="points3">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText3">The hotel is very new but different facilities ware not cleaned up or not working But the hotelmanager and the women in the Restaurant were very friendly and organized things very professionaly for us.<br>
+            <i class="material-icons">room</i><b>59,Myote Dwin Street,Anauk Qaurter,Dawei, Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 210,191 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/pt1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/pt2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText4()" id="textButton4">Show More</button>
+       <h3>PeTi Guest House</h3>
+      <p>
+        <span id="points4">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;</b><span id="moreText4">
+          	Get your trip off to a great start with a stay at this property, which offers car park free of charge.<br>
+            <i class="material-icons">room</i><b> Maungmagan Road,Dawei,Dawei,Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 75,249 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+</div>
+<!-- end grid -->
+<!-- Portfolio Gallery Grid -->
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/v1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/v2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText5()" id="textButton5">Show More</button>
+      <h3>Samatha Villa & Spa</h3>
+      <p>
+        <span id="points5">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;&star;</b><span id="moreText5">Get your trip off to a great start with a stay at this property, which offers free Wi-Fi in all rooms.<br>
+            <i class="material-icons">room</i><b>Kyone Kha Nan Beach,Dawei,Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 75,249 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/z1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/z2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText6()" id="textButton6">Show More</button>
+       <h3>Hotel Zayar Htet San</h3>
+      <p>
+        <span id="points6">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText6"> 
+          	Comfortable, spacious rooms with reliable air con, wifi and hot water. Good breakfast - not a buffet but hot food cooked to order from a set menu - that includes western and Asian options. <br>
+            <i class="material-icons">room</i><b>No.(566),Ye Yeik Thar Street,Dawei, Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 210,191 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> --> 
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/m1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/m2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText7()" id="textButton7">Show More</button>
+       <h3>The Mandolis</h3>
+      <p>
+        <span id="points7">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;&star;</b><span id="moreText7">Owner, Narwar provided excellent recommendations on what & how to see Dawei & surrounds. My tip if you do the local cooking class is don’t have breakfast & enjoy!<br>
+          <i class="material-icons">room</i><b>10 Mingalar Thidar Street,We Kyun Htein Le Ward,Dawei, Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 113,503 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->  
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/maung1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/maung2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText8()" id="textButton8">Show More</button>
+       <h3>Maungmagan Beach Resort</h3>
+      <p>
+        <span id="points8">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;</b><span id="moreText8"> Can’t beat the location right on the beach! Staff were super nice and helpful. Only down side is that a lot of trash washes up on the beach.<br>
+            <i class="material-icons">room</i><b>Khan Chay Street,Dawei, Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 210,191 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- end grid -->
+
+
+
+
+  <!-- footer nav start -->
+  <div> <h3 style="font-size:30px;text-align: left;font-family: Calibri;"><a style="color:black;text-decoration: none; margin-left: 20px;text-shadow: 1px 5px 6px gray; " href="home.html">rest&leisure.com</a></h3> 
+    </div>
+    
+  <nav id="footer" >
+
+    <div>
+      <table class="tb">
+      <tr>
+        <th>You can find hotels here...</th>
+        <th></th>
+        <th>Contact Us</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td align="left"><a href="hotels.html">Kachin State<br><br>
+          <a href="bago.html" >Bago</a><br><br>
+          <a href="mandalay.html" >Mandalay</a><br><br>
+          <a href="pyinoolwin.html" >Pyinoolwin</a><br><br>
+          <a href="bagan.html" >Bagan</a><br><br>
+          <a href="inlay.html" >Inlay</a><br><br>
+          <a href="taunggyi.html" >Taunggyi</a><br><br>
+          <a href="naypyitaw.html" >Nay Pyi Taw</a><br><br>
+          </a>
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="mailto:rest8leisure@gmail.com"><img src="./photo/mailb.png" class="logoicon">rest8leisure@gmail.com</a>
+          <br><br>
+          <a href="http://www.facebook.com"><img src="./photo/fbb.png" class="logoicon">REST&LEISURE Facebook Page</a>
+          <br><br>
+          <a href="tel:09961454036"><img src="./photo/phb.png" class="logoicon">09-953 994 604</a>
+          <br><br>
+          <a href="tel:05311958"><img src="./photo/phh.png" class="logoicon">053-11958</a>
+        
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="#top"><img src="./photo/up.png" class="logoicon">Up to start of the page</a>
+          <br><br>
+        </td>
+      </tr>
+      
+      </table>
+      <div id="cpyfoot">
+        rest&leisure&nbsp;&copy;copyright 2023 <br>
+
+      </div>
+    </div>
+  </nav>
+  <!-- footer nav end -->
+  
+
+ 
+    <script>
+
+      window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    // sticky navigation var end
+
+
+
+        function toggleText() {
+ 
+            // Get all the elements from the page
+            let points =
+                document.getElementById("points");
+ 
+            let showMoreText =
+                document.getElementById("moreText");
+ 
+            let buttonText =
+                document.getElementById("textButton");
+ 
+            // If the display property of the dots to be displayed is already set to 'none' (that is hidden) then this section of code triggers
+            if (points.style.display === "none") {
+ 
+                // Hide the text between the span
+                // elements
+                showMoreText.style.display = "none";
+ 
+                // Show the dots after the text
+                points.style.display = "inline";
+ 
+                // Change the text on button to
+                // 'Show More'
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            // If the hidden portion is revealed,
+            // we will change it back to be hidden
+            else {
+ 
+                // Show the text between the
+                // span elements
+                showMoreText.style.display = "inline";
+ 
+                // Hide the dots after the text
+                points.style.display = "none";
+ 
+                // Change the text on button
+                // to 'Show Less'
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+          function toggleText2(){
+            let points =
+                document.getElementById("points2");
+ 
+            let showMoreText =
+                document.getElementById("moreText2");
+ 
+            let buttonText =
+                document.getElementById("textButton2");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+          function toggleText3(){
+            let points =
+                document.getElementById("points3");
+ 
+            let showMoreText =
+                document.getElementById("moreText3");
+ 
+            let buttonText =
+                document.getElementById("textButton3");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText4(){
+            let points =
+                document.getElementById("points4");
+ 
+            let showMoreText =
+                document.getElementById("moreText4");
+ 
+            let buttonText =
+                document.getElementById("textButton4");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText5(){
+            let points =
+                document.getElementById("points5");
+ 
+            let showMoreText =
+                document.getElementById("moreText5");
+ 
+            let buttonText =
+                document.getElementById("textButton5");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText6(){
+            let points =
+                document.getElementById("points6");
+ 
+            let showMoreText =
+                document.getElementById("moreText6");
+ 
+            let buttonText =
+                document.getElementById("textButton6");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText7(){
+            let points =
+                document.getElementById("points7");
+ 
+            let showMoreText =
+                document.getElementById("moreText7");
+ 
+            let buttonText =
+                document.getElementById("textButton7");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText8(){
+            let points =
+                document.getElementById("points8");
+ 
+            let showMoreText =
+                document.getElementById("moreText8");
+ 
+            let buttonText =
+                document.getElementById("textButton8");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+    </script>
+  
+</body>
+</html>

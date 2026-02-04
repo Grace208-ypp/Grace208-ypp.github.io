@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;margin: 0;
+}
+
+body {
+  background-color: lightblue;
+}
+
+  /*    navbar css codes start*/
+
+    #navbar{
+      overflow: hidden;z-index: 100;
+    }
+    #navbar a{
+      color: black;
+      text-align: center;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color.5s;
+      margin: 0;
+    }
+    #navbar a:hover{
+      color:red;
+    }
+
+    .sticky{
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+
+
+/*    navbar css codes end*/
+
+/*image fade in fade out start*/
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 220px;
+  height: 150px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+/*img fade in fade out end*/
+
+/*show more start*/
+  #moreText,#moreText2, #moreText3, #moreText4, #moreText5, #moreText6, #moreText7, #moreText8{
+            /* Display nothing for the element */
+            display: none;
+        }
+
+  #textButton, #textButton2, #textButton3, #textButton4, #textButton5, #textButton6, #textButton7, #textButton8{
+    margin-top:10px ;
+  }
+
+/*show more end*/
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/*footer start*/
+
+  #footer{
+          background:#8da6c2;
+          margin-left: 0px; margin-right: 0;
+          color: black;
+        }
+
+        .tb{
+          text-shadow: 1px 4px 6px gray;
+          border-spacing: 20px;
+        }
+        .tb a{
+          text-decoration: none;
+          color: navy;
+        }
+
+        .tb img{
+          width: 25px;
+          height: 25px;
+        }
+
+    td, th{
+      padding: 50px;
+    }
+
+    #cpyfoot{
+      background: gray;
+      color: black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    
+/*  footer end*/
+</style>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+    <!-- top menu bar start -->
+  <nav id="top">
+
+    <div style="background-color: rgba(255,255,255,0.3); padding: 20px;"  id="navbar"><b style="color: black;font-size: 40px;text-shadow: 1px 3px 5px gray;font-family: 'Changa', sans-serif; ">REST & LEISURE</b>
+      <div style="float:right;padding: 20px;">
+        <a href="home.html" title="Go To Our Home Page">Home |&nbsp;&nbsp;</a>
+        <a href="hotels.html">Hotels&Resorts |&nbsp;&nbsp;</a>
+        <a href="login.html">Login |&nbsp;&nbsp;</a>
+        <a href="register.html">Register |&nbsp;&nbsp;</a>
+        <a href="aboutus.html" >About Us |&nbsp;&nbsp;</a>
+        </div>
+    </div>
+    
+
+  </nav>
+  <!-- top  menu bar end -->
+
+<!-- MAIN (Center website) -->
+<div  class="main" style="margin-top: 120px;">
+
+<h1>Hotels in Mandalay</h1>
+<hr size="10">
+  <i style="font-size:19px;line-height: 45px;font-weight: bold;">
+  Mandalay is a city and former royal capital in northern Myanmar (formerly Burma) on the Irrawaddy River. In its center is the restored Mandalay Palace from the Konbaung Dynasty, surrounded by a moat. Mandalay Hill provides views of the city from its summit, which is reached by covered stairway. At its foot, the Kuthodaw Pagoda houses hundreds of Buddhist-scripture-inscribed marble slabs.
+</i>
+
+
+<i style="font-size:19px;line-height: 45px;font-weight: bold;">
+  Naypyitaw is the modern capital of Myanmar (Burma), north of former capital, Yangon. Traditional tiered roofs crown the buildings of its Parliament (Hluttaw) complex. Exhibits at the National Museum include Burmese art and ancient artifacts. The golden stupa of Uppatasanti Pagoda has an interior carved with stories from Buddhist literature. In a nearby enclosure are white elephants, once prized by Burmese royalty<br>Fascinating Facts. Nay Pyi Taw is one of the fastest growing cities in Myanmar. The city has hosted major events such as the Southeast Asian Games, the World Economic Forum and the ASEAN Summit. The parliament is housed in a large complex consisting of 31 building.
+</i>
+
+
+<!-- Portfolio Gallery Grid -->
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/dragon1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/dragon2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText()" id="textButton">Show More</button>
+      <h3>Dragon Phoenix Hotel</h3>
+      <p>
+        <span id="points">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;<br></b><span id="moreText">Set in Mandalay, less than 1 km from Sri Ganesh Temple, Dragon Phoenix Hotel offers accommodation with a shared lounge, free private parking, a restaurant and a bar. This 3-star hotel offers room service, a 24-hour front desk and free WiFi. The accommodation provides a concierge service, a tour desk and luggage storage for guests.<br><br>
+                        <i class="material-icons">room</i><b>No.114,31st Street,Between 79th x 80th Street,Chan Aye Thar Zan Township,Mandalay,Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 125,064 <b>per night</b><br>
+                        <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 112,557 <b>1 night, 2 adults[include taxes and charges]</b><br>
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/nons.jpg" alt="icon" width="30" height="25">Non-smoking rooms<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+
+
+             
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/royal1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/royal2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+            <button onclick="toggleText2()" id="textButton2">Show More</button>
+       <h3>Royal Pearl Hotel</h3>
+      <p>
+        <span id="points2">...</span>
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText2">Offering rooms with air conditioning, Royal Pearl Hotel is just a 5-minute walk from Mandalay Railway Station. Free WiFi access is available in all areas.Each room here will provide you with a flat-screen cable/satellite TV, an electric kettle and a seating area. Featuring a shower, private bathroom also comes with free toiletries and slippers. <br>
+            <i class="material-icons">room</i><b>No. 196, 29th Street, Between 80th and 81st Street, Chan Aye Thar Zan Township, 11221 Mandalay, Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 125,064 <b>per night</b><br>
+                        <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 69,342 <b>1 night, 2 adults[include taxes and charges]</b><br>
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/ingyin1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/ingyin2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText3()" id="textButton3">Show More</button>
+       <h3>Shwe Ingyin Hotel</h3>
+      <p>
+        <span id="points3">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText3"> Shwe Inngyinn Hotel Mandalay is a short walk from Central Railway Station. It offers air-conditioned rooms with free Wi-Fi and free public parking. The hotel has a fitness centre and tour desk.The hotel is a 10-minute drive from the centre of Mandalay and a 45-minute drive from Mandalay Airport.Rooms are fitted with a satellite TV, minibar and electric kettle.<br>
+            <i class="material-icons">room</i><b>Corner of 30th St &78 St, 05000 Mandalay, Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 210,191 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/fit.jpg" alt="icon" width="50" height="30">Fitness centre<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/kaung1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/kaung2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText4()" id="textButton4">Show More</button>
+       <h3>Kaung Myint Hotel</h3>
+      <p>
+        <span id="points4">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText4">
+          Kaung Myint Hotel is set in Mandalay's China Town area, a short walk from Mandalay Railway Station. Guests can enjoy the on-site restaurant. Free private parking is available on site.E<br>
+          <i class="material-icons">room</i><b>No.502, 80 Road, Between 30 & 31 Street, 11101 Mandalay, Myanmar.</b> <br><br>
+            
+              <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 77,771<b>1 night, 2 adults[include taxes and charges,no refund]</b><br>
+               <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 75,249<b>1 night, 2 adults[include taxes and charges]</b><br>       
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/airport.png" alt="icon" width="50" height="30">Airport Shuttle<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+</div>
+<!-- end grid -->
+<!-- Portfolio Gallery Grid -->
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/yadanar1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/yadanar2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText5()" id="textButton5">Show More</button>
+      <h3>Gold Yadanar Hotel</h3>
+      <p>
+        <span id="points5">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText5">Comfortable rooms with air conditioning are provided at Gold Yadanar Hotel, a 5-minute walk from Diamond Shopping Centre. The hotel is equipped with a restaurant and free on-site parking facilities. <br>
+            <i class="material-icons">room</i><b>No.111, 34th Street, Between 77th&78th Streets, Chanayetharsan Tsp; Mandalay, 11121 Mandalay, Myanmar </b> <br><br>
+            
+              <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 85,127 <b>two single beds[include taxes and charges,no refund]</b><br>
+               <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 113,503<b>1 double beds[include taxes and charges]</b><br>       
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/79_1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/79_2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText6()" id="textButton6">Show More</button>
+       <h3>79 Living Hotel</h3>
+      <p>
+        <span id="points6">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText6"> 79 Living Hotel is a 5-minute walk from Mandalay Royal Palace. It offers air-conditioned rooms with free Wi-Fi. The hotel is equipped with a 24-hour front desk, tour desk and laundry service. Free public parking is possible in a nearby location.The hotel is a 2-minute walk from Mandalay Railway Station.<br>
+            <i class="material-icons">room</i><b>79th St, between 29th&30th st, Chan Aye Thar Zan Tsp, 11131 Mandalay, Myanmar. </b> <br><br>
+            
+              <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 67,261two single beds[include taxes and charges,no refund]</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/gold1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/gold2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText7()" id="textButton7">Show More</button>
+       <h3>Gold Leaf Hotel</h3>
+      <p>
+        <span id="points7">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText7"> Situated in Mandalay, 1.9 km from Ma Soe Yein Nu Kyaung Monastery, Gold Leaf Hotel features accommodation with an outdoor swimming pool, free private parking, a shared lounge and a restaurant. This 3-star hotel offers room service, a 24-hour front desk and free WiFi.<br>
+            <i class="material-icons">room</i><b>No-108, 36th Street Between 77th x 78th Street, MaHarAungMyay Township, 11101 Mandalay, Myanmar. </b> <br><br>
+            
+              <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 67,261two single beds[include taxes and charges,no refund]</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/nova1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/nova2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText8()" id="textButton8">Show More</button>
+       <h3>The Hotel Nova</h3>
+      <p>
+        <span id="points8">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText8"> Located in Mandalay, 500 metres from Mahar Thatkyarthiha Pagoda, The Hotel Nova provides accommodation with free bikes, free private parking, a shared lounge and a restaurant.<br>
+            <i class="material-icons">room</i><b>No.76, West Aung Nan Ward, 32nd Street, Bet 85th x 86th Street Chan Aye Tharzan Township, 11101 Mandalay, Myanmar.</b> <br><br>
+            
+              <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 94,586 two single beds/1 extra large double bed[include taxes and charges]</b><br>
+              <img src="./photo/beds.png" alt="icon" width="25" height="25">MMK 178,663 1 single bed/1 large double bed[include taxes and charges,]</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- end grid -->
+
+
+
+
+  <!-- footer nav start -->
+  <div> <h3 style="font-size:30px;text-align: left;font-family: Calibri;"><a style="color:black;text-decoration: none; margin-left: 20px;text-shadow: 1px 5px 6px gray; " href="home.html">rest&leisure.com</a></h3> 
+    </div>
+    
+  <nav id="footer" >
+
+    <div>
+      <table class="tb">
+      <tr>
+        <th>You can find hotels here...</th>
+        <th></th>
+        <th>Contact Us</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+       <td align="left"><a href="hotels.html">Kachin State<br><br>
+          <a href="bago.html" >Bago</a><br><br>
+          <a href="mandalay.html" >Mandalay</a><br><br>
+          <a href="pyinoolwin.html" >Pyinoolwin</a><br><br>
+          <a href="bagan.html" >Bagan</a><br><br>
+          <a href="inlay.html" >Inlay</a><br><br>
+          <a href="taunggyi.html" >Taunggyi</a><br><br>
+          <a href="naypyitaw.html" >Nay Pyi Taw</a><br><br>
+          </a>
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="mailto:rest8leisure@gmail.com"><img src="./photo/mailb.png" class="logoicon">rest8leisure@gmail.com</a>
+          <br><br>
+          <a href="http://www.facebook.com"><img src="./photo/fbb.png" class="logoicon">REST&LEISURE Facebook Page</a>
+          <br><br>
+          <a href="tel:09961454036"><img src="./photo/phb.png" class="logoicon">09-953 994 604</a>
+          <br><br>
+          <a href="tel:05311958"><img src="./photo/phh.png" class="logoicon">053-11958</a>
+        
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="#top"><img src="./photo/up.png" class="logoicon">Up to start of the page</a>
+          <br><br>
+        </td>
+      </tr>
+      
+      </table>
+      <div id="cpyfoot">
+        rest&leisure&nbsp;&copy;copyright 2023 <br>
+
+      </div>
+    </div>
+  </nav>
+  <!-- footer nav end -->
+  
+
+ 
+    <script>
+
+      window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    // sticky navigation var end
+
+
+
+        function toggleText() {
+ 
+            // Get all the elements from the page
+            let points =
+                document.getElementById("points");
+ 
+            let showMoreText =
+                document.getElementById("moreText");
+ 
+            let buttonText =
+                document.getElementById("textButton");
+ 
+            // If the display property of the dots to be displayed is already set to 'none' (that is hidden) then this section of code triggers
+            if (points.style.display === "none") {
+ 
+                // Hide the text between the span
+                // elements
+                showMoreText.style.display = "none";
+ 
+                // Show the dots after the text
+                points.style.display = "inline";
+ 
+                // Change the text on button to
+                // 'Show More'
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            // If the hidden portion is revealed,
+            // we will change it back to be hidden
+            else {
+ 
+                // Show the text between the
+                // span elements
+                showMoreText.style.display = "inline";
+ 
+                // Hide the dots after the text
+                points.style.display = "none";
+ 
+                // Change the text on button
+                // to 'Show Less'
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+          function toggleText2(){
+            let points =
+                document.getElementById("points2");
+ 
+            let showMoreText =
+                document.getElementById("moreText2");
+ 
+            let buttonText =
+                document.getElementById("textButton2");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+          function toggleText3(){
+            let points =
+                document.getElementById("points3");
+ 
+            let showMoreText =
+                document.getElementById("moreText3");
+ 
+            let buttonText =
+                document.getElementById("textButton3");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText4(){
+            let points =
+                document.getElementById("points4");
+ 
+            let showMoreText =
+                document.getElementById("moreText4");
+ 
+            let buttonText =
+                document.getElementById("textButton4");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText5(){
+            let points =
+                document.getElementById("points5");
+ 
+            let showMoreText =
+                document.getElementById("moreText5");
+ 
+            let buttonText =
+                document.getElementById("textButton5");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText6(){
+            let points =
+                document.getElementById("points6");
+ 
+            let showMoreText =
+                document.getElementById("moreText6");
+ 
+            let buttonText =
+                document.getElementById("textButton6");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText7(){
+            let points =
+                document.getElementById("points7");
+ 
+            let showMoreText =
+                document.getElementById("moreText7");
+ 
+            let buttonText =
+                document.getElementById("textButton7");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText8(){
+            let points =
+                document.getElementById("points8");
+ 
+            let showMoreText =
+                document.getElementById("moreText8");
+ 
+            let buttonText =
+                document.getElementById("textButton8");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+    </script>
+  
+</body>
+</html>

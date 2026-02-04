@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;margin: 0;
+}
+
+body {
+  background-color: lightblue;
+}
+
+  /*    navbar css codes start*/
+
+    #navbar{
+      overflow: hidden;z-index: 100;
+    }
+    #navbar a{
+      color: black;
+      text-align: center;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color.5s;
+      margin: 0;
+    }
+    #navbar a:hover{
+      color:red;
+    }
+
+    .sticky{
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+
+
+/*    navbar css codes end*/
+
+/*image fade in fade out start*/
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 220px;
+  height: 150px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+/*img fade in fade out end*/
+
+/*show more start*/
+  #moreText,#moreText2, #moreText3, #moreText4, #moreText5, #moreText6, #moreText7, #moreText8{
+            /* Display nothing for the element */
+            display: none;
+        }
+
+  #textButton, #textButton2, #textButton3, #textButton4, #textButton5, #textButton6, #textButton7, #textButton8{
+    margin-top:10px ;
+  }
+
+/*show more end*/
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/*footer start*/
+
+  #footer{
+          background:#8da6c2;
+          margin-left: 0px; margin-right: 0;
+          color: black;
+        }
+
+        .tb{
+          text-shadow: 1px 4px 6px gray;
+          border-spacing: 20px;
+        }
+        .tb a{
+          text-decoration: none;
+          color: navy;
+        }
+
+        .tb img{
+          width: 25px;
+          height: 25px;
+        }
+
+    td, th{
+      padding: 50px;
+    }
+
+    #cpyfoot{
+      background: gray;
+      color: black;
+      padding: 10px;
+      text-align: center;
+    }
+    
+/*  footer end*/
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+    <!-- top menu bar start -->
+  <nav id="top">
+
+    <div style="background-color: rgba(255,255,255,0.3); padding: 20px;"  id="navbar"><b style="color: black;font-size: 40px;text-shadow: 1px 3px 5px gray;font-family: 'Changa', sans-serif; ">REST & LEISURE</b>
+      <div style="float:right;padding: 20px;">
+        <a href="home.html" title="Go To Our Home Page">Home |&nbsp;&nbsp;</a>
+        <a href="hotels.html">Hotels&Resorts |&nbsp;&nbsp;</a>
+        <a href="login.html">Login |&nbsp;&nbsp;</a>
+        <a href="register.html">Register |&nbsp;&nbsp;</a>
+        <a href="aboutus.html" >About Us |&nbsp;&nbsp;</a>
+        </div>
+    </div>
+    
+
+  </nav>
+  <!-- top  menu bar end -->
+
+<!-- MAIN (Center website) -->
+<div  class="main" style="margin-top: 120px;">
+
+<h1>Hotels in Yangon</h1>
+<hr size="10">
+
+<i style="font-size:19px;line-height: 45px;font-weight: bold;">
+  Yangon (formerly known as Rangoon) is the largest city in Myanmar (formerly Burma). A mix of British colonial architecture, modern high-rises and gilded Buddhist pagodas define its skyline. Its famed Shwedagon Paya, a huge, shimmering pagoda complex, draws thousands of pilgrims annually. The city's other notable religious sites include the Botataung and Sule pagodas, both housing Buddhist relics. 
+</i>
+
+<!-- Portfolio Gallery Grid -->
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/lottee1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/lottee2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText()" id="textButton">Show More</button>
+      <h3>LOTTE Hotel</h3>
+      <p>
+        <span id="points">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;&star;&star;</b><span id="moreText">Located within 3.1 mi of Shwedagon Pagoda, LOTTE Hotel Yangon features a number of amenities including an outdoor infinity pool, a fitness center, a garden, Screen Golf Lounge, Sauna, Hotel Spa Massage, Poolside Cabana, Plunge Pools, Juccizi and business facilities.<br>
+            <i class="material-icons">room</i><b>No.82, Sin Phyu Shin Avenue, Pyay Road, 61/2 Mile, Ward 11, Hlaing Township, 11051 Yangon,Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 113,503 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/fit.jpg" alt="icon" width="50" height="30">Fitness centre<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->  
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/pacific1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/pacific2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+            <button onclick="toggleText2()" id="textButton2">Show More</button>
+       <h3>Pan Pacific Hotel</h3>
+      <p>
+        <span id="points2">...</span>
+          <b style="color:gold;">&star;&star;&star;&star;&star;</b><span id="moreText2">Featuring breathtaking city views of Yangon, Pan Pacific Yangon boasts luxuriously furnished rooms and suites, an outdoor infinity pool as well as spa and fitness centre.<br>
+            <i class="material-icons">room</i><b> Shwedagon Pagoda Road cornor of Shwedagon Pagoda Road and Bogyoke Aung San Road, Yangon downtown, Yangon,Myanmar.</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 223,854 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/fit.jpg" alt="icon" width="50" height="30">Fitness centre<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> -->
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/inya1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/inya2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText3()" id="textButton3">Show More</button>
+       <h3>Inya Lake Hotel</h3>
+      <p>
+        <span id="points3">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;&star;</b><span id="moreText3"> Inya Lake Hotel is a 20-minute drive from Shawedagong Pagoda and Bog Yoke Market. It offers rooms with free Wi-Fi and a private balcony. This 4-star property features an outdoor pool, a fitness centre and a tour desk.<br>
+          <i class="material-icons">room</i><b>37, Kaba Aye Pagoda Road, Mayangone Township, Mayangone Township, 11181 Yangon, Myanmar </b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 176,561 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/fit.jpg" alt="icon" width="50" height="30">Fitness centre<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> --></span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/novo1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/novo2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText4()" id="textButton4">Show More</button>
+       <h3>Novotel Yangon Max</h3>
+      <p>
+        <span id="points4">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;&star;&star;</b><span id="moreText4">
+          This 5-star hotel has air-conditioned rooms with a private bathroom. Sule Pagoda is 6 km away and University of Medicine 1, Yangon is 200 metres from the hotel.Guest rooms at the hotel come with a seating area and a flat-screen TV.<br>
+          <i class="material-icons">room</i><b>459 Pyay Road Kamayut, 11041 Yangon, Myanmar –</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 139,777 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/fit.jpg" alt="icon" width="50" height="30">Fitness centre<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> --> 
+          </span>
+    </p>
+    </div>
+  </div>
+</div>
+<!-- end grid -->
+<!-- Portfolio Gallery Grid -->
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/hotelygn1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/hotelygn2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText5()" id="textButton5">Show More</button>
+      <h3>Hotel Yangon</h3>
+      <p>
+        <span id="points5">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText5">Featuring a business centre and a fitness centre, Hotel Yangon is a 5-minute walk from 8 Miles Junction Shopping Centre.<br>
+            <i class="material-icons">room</i><b>No. 91/93, Corner of Pyay Road and Kabaraye Pagoda Road, 8th Miles Junction, Mayangone Township, Mayangone Township, 11221 Yangon, Myanmar</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 145,663 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/fit.jpg" alt="icon" width="50" height="30">Fitness centre<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> --> 
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/kc1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/kc2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText6()" id="textButton6">Show More</button>
+       <h3>K.C Hotel</h3>
+      <p>
+        <span id="points6">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText6"> At the hotel all rooms come with air conditioning, a seating area, a flat-screen TV with satellite channels, a safety deposit box and a private bathroom with a shower, free toiletries and a hairdryer.<br>
+            <i class="material-icons">room</i><b>No/14, Radio Station Road, Mingalardone Township, Yangon, Myanmar, Mayangone Township, 11021 Yangon, Myanmar </b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 68,733 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/fit.jpg" alt="icon" width="50" height="30">Fitness centre<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> --> 
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/yankin1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/yankin2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText7()" id="textButton7">Show More</button>
+       <h3>Hotel Yankin</h3>
+      <p>
+        <span id="points7">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText7"> Hotel Yankin is within a 5-minute drive from Yankin Shopping Centre. Yangon International Airport is a 30-minute ride away. This property offers free parking.<br>
+            <i class="material-icons">room</i><b>186, Lu Nge Thitsar Street, on Thitsar (Kanbe) Road, Yankin Township, Yankin Township, 11181 Yangon, Myanmar</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 63,057 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/fit.jpg" alt="icon" width="50" height="30">Fitness centre<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> --> 
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/life1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/life2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText8()" id="textButton8">Show More</button>
+       <h3>Myanmar Life Hotel</h3>
+      <p>
+        <span id="points8">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <b style="color:gold;">&star;&star;&star;</b><span id="moreText8">Boasting an outdoor pool and an on-site restaurant, Myanmar Life Hotel is situated in Sawbwagyigon, approximately 15 km from Yangon. For extra comfort, the property offers free WiFi throughout and a free airport shuttle services.<br>
+            <i class="material-icons">room</i><b>No 41 Radio Station Rd, Mingalardone Township No 41, Mayangone Township, 11121 Yangon, Myanmar</b> <br><br>
+            
+            <i class="material-icons">hotel</i> MMK 71,549 <b>per night</b><br>
+                      
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 200,000[VVIP]<br><br> -->
+            <img src="./photo/restaur.jpg" alt="icon" width="50" height="25">Restaurant<br>
+            <img src="./photo/p.jpg" alt="icon" width="50" height="25">Parking<br>
+            <img src="./photo/cmaker.png" alt="icon" width="30" height="25">Tea/coffee maker in all rooms<br>
+            <img src="./photo/fit.jpg" alt="icon" width="50" height="30">Fitness centre<br>
+            <img src="./photo/spa.png" alt="icon" width="30" height="25">Spa & wellness centre<br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+
+            <!-- <i class="material-icons">park</i>Garden View<br> --> 
+          </span>
+    </p>
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- end grid -->
+
+
+
+
+  <!-- footer nav start -->
+  <div> <h3 style="font-size:30px;text-align: left;font-family: Calibri;"><a style="color:black;text-decoration: none; margin-left: 20px;text-shadow: 1px 5px 6px gray; " href="home.html">rest&leisure.com</a></h3> 
+    </div>
+    
+  <nav id="footer" >
+
+    <div>
+      <table class="tb">
+      <tr>
+        <th>You can find hotels here...</th>
+        <th></th>
+        <th>Contact Us</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td align="left"><a href="hotels.html">Kachin State<br><br>
+          <a href="bago.html" >Bago</a><br><br>
+          <a href="mandalay.html" >Mandalay</a><br><br>
+          <a href="pyinoolwin.html" >Pyinoolwin</a><br><br>
+          <a href="bagan.html" >Bagan</a><br><br>
+          <a href="inlay.html" >Inlay</a><br><br>
+          <a href="taunggyi.html" >Taunggyi</a><br><br>
+          <a href="naypyitaw.html" >Nay Pyi Taw</a><br><br>
+          </a>
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="mailto:rest8leisure@gmail.com"><img src="./photo/mailb.png" class="logoicon">rest8leisure@gmail.com</a>
+          <br><br>
+          <a href="http://www.facebook.com"><img src="./photo/fbb.png" class="logoicon">REST&LEISURE Facebook Page</a>
+          <br><br>
+          <a href="tel:09961454036"><img src="./photo/phb.png" class="logoicon">09-953 994 604</a>
+          <br><br>
+          <a href="tel:05311958"><img src="./photo/phh.png" class="logoicon">053-11958</a>
+        
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="#top"><img src="./photo/up.png" class="logoicon">Up to start of the page</a>
+          <br><br>
+        </td>
+      </tr>
+      
+      </table>
+      <div id="cpyfoot">
+        rest&leisure&nbsp;&copy;copyright 2023 <br>
+
+      </div>
+    </div>
+  </nav>
+  <!-- footer nav end -->
+  
+
+ 
+    <script>
+
+      window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    // sticky navigation var end
+
+
+
+        function toggleText() {
+ 
+            // Get all the elements from the page
+            let points =
+                document.getElementById("points");
+ 
+            let showMoreText =
+                document.getElementById("moreText");
+ 
+            let buttonText =
+                document.getElementById("textButton");
+ 
+            // If the display property of the dots to be displayed is already set to 'none' (that is hidden) then this section of code triggers
+            if (points.style.display === "none") {
+ 
+                // Hide the text between the span
+                // elements
+                showMoreText.style.display = "none";
+ 
+                // Show the dots after the text
+                points.style.display = "inline";
+ 
+                // Change the text on button to
+                // 'Show More'
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            // If the hidden portion is revealed,
+            // we will change it back to be hidden
+            else {
+ 
+                // Show the text between the
+                // span elements
+                showMoreText.style.display = "inline";
+ 
+                // Hide the dots after the text
+                points.style.display = "none";
+ 
+                // Change the text on button
+                // to 'Show Less'
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+          function toggleText2(){
+            let points =
+                document.getElementById("points2");
+ 
+            let showMoreText =
+                document.getElementById("moreText2");
+ 
+            let buttonText =
+                document.getElementById("textButton2");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+          function toggleText3(){
+            let points =
+                document.getElementById("points3");
+ 
+            let showMoreText =
+                document.getElementById("moreText3");
+ 
+            let buttonText =
+                document.getElementById("textButton3");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText4(){
+            let points =
+                document.getElementById("points4");
+ 
+            let showMoreText =
+                document.getElementById("moreText4");
+ 
+            let buttonText =
+                document.getElementById("textButton4");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText5(){
+            let points =
+                document.getElementById("points5");
+ 
+            let showMoreText =
+                document.getElementById("moreText5");
+ 
+            let buttonText =
+                document.getElementById("textButton5");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText6(){
+            let points =
+                document.getElementById("points6");
+ 
+            let showMoreText =
+                document.getElementById("moreText6");
+ 
+            let buttonText =
+                document.getElementById("textButton6");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText7(){
+            let points =
+                document.getElementById("points7");
+ 
+            let showMoreText =
+                document.getElementById("moreText7");
+ 
+            let buttonText =
+                document.getElementById("textButton7");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText8(){
+            let points =
+                document.getElementById("points8");
+ 
+            let showMoreText =
+                document.getElementById("moreText8");
+ 
+            let buttonText =
+                document.getElementById("textButton8");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+    </script>
+  
+</body>
+</html>

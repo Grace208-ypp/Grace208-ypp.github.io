@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hotelsinmyitkyina.com</title>
+
+
+<style>
+* {
+  box-sizing: border-box;margin: 0;
+}
+
+body {
+  background-color: lightblue;
+}
+
+  /*    navbar css codes start*/
+
+    #navbar{
+      overflow: hidden;z-index: 100;
+    }
+    #navbar a{
+      color: black;
+      text-align: center;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color.5s;
+      margin: 0;
+    }
+    #navbar a:hover{
+      color:red;
+    }
+
+    .sticky{
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+
+
+/*    navbar css codes end*/
+
+/*image fade in fade out start*/
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 220px;
+  height: 150px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+/*img fade in fade out end*/
+
+/*show more start*/
+  #moreText,#moreText2, #moreText3, #moreText4, #moreText5, #moreText6, #moreText7, #moreText8{
+            /* Display nothing for the element */
+            display: none;
+        }
+
+  #textButton, #textButton2, #textButton3, #textButton4, #textButton5, #textButton6, #textButton7, #textButton8{
+    margin-top:10px ;
+  }
+
+/*show more end*/
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+span a{
+  color: blue;
+  text-decoration: none;
+}
+/*footer start*/
+
+  #footer{
+          background:#8da6c2;
+          margin-left: 0px; margin-right: 0;
+          color: black;
+        }
+
+        .tb{
+          text-shadow: 1px 4px 6px gray;
+          border-spacing: 20px;
+        }
+        .tb a{
+          text-decoration: none;
+          color: navy;
+        }
+
+        .tb img{
+          width: 25px;
+          height: 25px;
+        }
+
+    td, th{
+      padding: 50px;
+    }
+
+    #cpyfoot{
+      background: gray;
+      color: black;
+      padding: 10px;
+      text-align: center;
+    }
+    
+/*  footer end*/
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+
+    <!-- top menu bar start -->
+  <nav id="top">
+
+    <div style="background-color: rgba(255,255,255,0.3); padding: 20px;"  id="navbar"><b style="color: black;font-size: 40px;text-shadow: 1px 3px 5px gray;font-family: 'Changa', sans-serif; ">REST & LEISURE</b>
+      <div style="float:right;padding: 20px;">
+        <a href="home.html" title="Go To Our Home Page">Home |&nbsp;&nbsp;</a>
+        <a href="hotels.html">Hotels&Resorts |&nbsp;&nbsp;</a>
+        <a href="login.html">Login |&nbsp;&nbsp;</a>
+        <a href="register.html">Register |&nbsp;&nbsp;</a>
+        <a href="aboutus.html" >About Us |&nbsp;&nbsp;</a>
+        </div>
+    </div>
+    
+
+  </nav>
+  <!-- top  menu bar end -->
+
+<!-- MAIN (Center website) -->
+
+<nav>
+<div  class="main" style="margin-top: 120px;">
+
+<h1>Hotels In Myitkyina</h1>
+<hr size="10">
+
+<i style="font-size:19px;line-height: 45px;font-weight: bold;">
+  Myitkyina is the capital city of Kachin State in Myanmar, located 1,480 kilometers from Yangon, and 785 kilometers from Mandalay. In Burmese it means "near the big river", and Myitkyina is on the west bank of the Ayeyarwady River, just below 40 kilometers from Myit-son of its two headstreams.What does Myitkyina mean?
+close to the big river
+The town's name means “close to the big river.” Myitkyinā is a trading centre on the Stilwell (Ledo) Road, which links with the Burma Road into China, and is also the terminus of the railway north from Yangon (Rangoon).
+</i>
+
+<!-- Portfolio Gallery Grid -->
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/palm.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/palm1.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText()" id="textButton">Show More</button>
+      <h3>Palm Spring Resort Hotel<br>
+<b style="color:gold;">&star;&star;&star;</b></h3>
+      <p>
+        <span id="points">...</span>
+        <br>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <span id="moreText"><br> 
+                          Designed to Beautiful Nature, Green Environment, located Next to Irrawaddy river. Love this place<br>
+            <i class="material-icons">room</i>  CC78+QF9, Myitkyina<br>
+<br><br>
+            <i class="material-icons">phone</i>074 22 828<br><br>
+            <i class="material-icons">hotel</i> MMK 88,000 per night<br>
+             <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 96,000[include breakfast]<br>
+            MMK 190,000[VVIP]<br><br>
+            <i class="material-icons">pool</i>swimming pool<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+            <img src="./photo/pk.png" alt="icon" width="25" height="25">Parking<br><br>
+            <img src="./photo/child.png" alt="icon" width="25" height="25">Friendly Child<br><br>
+
+             <br> <br>Check-in:  14:00<br>Check-out:  12:00
+            <!-- <br><br><img src="./photo/fbb.png" width="25" height="25"> -->
+            <!-- <a href="https://www.facebook.com/myakyunnadimotel">visit Facebook</a> -->
+
+
+          </span>
+      </p>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/madria.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/madria1.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+            <button onclick="toggleText2()" id="textButton2">Show More</button>
+       <h3>Hotel Madira<br> Hotel<b style="color:gold;">&star;&star;</b></h3>
+      <p>
+        <span id="points2">...</span>
+        <br>
+          <span id="moreText2"> 
+             Set near restaurants, this casual hotel is 2 km from Myitkyina Railway Station. The Kachin State Cultural Museum is also 2 km away.<br>The relaxed rooms offer free Wi-Fi, wood furnishings and flat-screen TVs, along with tea and coffeemaking facilities. Room service is available 24 hours.<br>
+            <i class="material-icons">room</i>510, Pyay Htuang Su Road , Yuzana Quarter, Myitkyina<br>
+<br><br>
+            <i class="material-icons">phone</i>09 790 179295<br><br>
+            <i class="material-icons">hotel</i> MMK 88,000 per night<br>
+             <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 96,000[include breakfast]<br>
+            MMK 190,000[VVIP]<br><br>
+            <i class="material-icons">pool</i>swimming pool<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+            <img src="./photo/pk.png" alt="icon" width="25" height="25">Parking<br><br>
+            <img src="./photo/child.png" alt="icon" width="25" height="25">Friendly Child<br><br>
+
+             <br> <br>Check-in:  14:00<br>Check-out:  12:00
+            <!-- <br><br><img src="./photo/fbb.png" width="25" height="25"> -->
+            <!-- <a href="https://www.facebook.com/myakyunnadimotel">visit Facebook</a> -->
+          </span>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./photo/wun.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/wun1.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText3()" id="textButton3">Show More</button>
+       <h3>Wun Tawp Garden Hotel<b style="color:gold;">&star;&star;</b></h3>
+      <p>
+        <span id="points3">...</span>
+        <br>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <span id="moreText3"><br>
+            <i class="material-icons">room</i>99QH+9HQ, Myitkyina<br>
+<br><br>
+            <i class="material-icons">phone</i>074 24 208<br><br>
+            <i class="material-icons">hotel</i> MMK 87,000 per night<br>
+             <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 93,000[include breakfast]<br>
+            MMK 180,000[VVIP]<br><br>
+            <i class="material-icons">pool</i>swimming pool<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+            <img src="./photo/pk.png" alt="icon" width="25" height="25">Parking<br><br>
+            <!-- <img src="./photo/child.png" alt="icon" width="25" height="25">Friendly Child<br><br> -->
+
+             <br> <br>Check-in:  14:00<br>Check-out:  12:00
+             <i><br>
+</i>
+            
+          </span>
+    </p>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/myit.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/myit1.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText4()" id="textButton4">Show More</button>
+       <h3>Hotel Myitkyina
+<br>Hotel<b style="color:gold;">&star;&star;&star;</b></h3>
+      <p>
+        <span id="points4">...</span>
+        <br>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <span id="moreText4">
+            <i class="material-icons">room</i>99QH+9HQ, Myitkyina<br>
+<br><br>
+            <i class="material-icons">phone</i>Myitkyina•074 21 117<br><br>
+            <i class="material-icons">hotel</i> MMK 87,000 per night<br>
+             <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 93,000[include breakfast]<br>
+            MMK 180,000[VVIP]<br><br>
+            <i class="material-icons">pool</i>swimming pool<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+            <img src="./photo/pk.png" alt="icon" width="25" height="25">Parking<br><br>
+            <!-- <img src="./photo/child.png" alt="icon" width="25" height="25">Friendly Child<br><br> -->
+
+             <br> <br>Check-in:  14:00<br>Check-out:  12:00 
+          
+          </span>
+    </p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./photo/hukung.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./photo/hukung1.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText5()" id="textButton5">Show More</button>
+      <h3>Hotel Hukaung<b style="color:gold;">&star;&star;&star;</b></h3>
+      <p>
+        <span id="points5">...</span>
+        <br>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <span id="moreText5">
+            <i class="material-icons">room</i> No. 252 Shwe Road, <br>Htoi San Quarter Tatt Kone, Myitkyina•<br>
+<br><br>
+            <i class="material-icons">phone</i> 09 42555 5958<br><br>
+            <i class="material-icons">hotel</i> MMK 87,000 per night<br>
+             <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 93,000[include breakfast]<br>
+            MMK 180,000[VVIP]<br><br>
+            <i class="material-icons">pool</i>swimming pool<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+            <img src="./photo/pk.png" alt="icon" width="25" height="25">Parking<br><br>
+            <!-- <img src="./photo/child.png" alt="icon" width="25" height="25">Friendly Child<br><br> -->
+
+             <br> <br>Check-in:  14:00<br>Check-out:  12:00  
+         
+    </p>
+    </div>
+  </div>
+
+  <div class="column">
+      <div class="content">
+              <div class="container">
+                  <img src="./photo/cartel.jpg" class="image" style="width:220px;height:150px;">
+                  <div class="overlay">
+                    <img src="./photo/cartel1.jpg" class="image" style="width:220px;height:150px;">
+                  </div>
+              </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText6()" id="textButton6">Show More</button>
+       <h3>Cartel Hotel<b style="color:gold;">&star;&star;&star;</b></h3>
+            <p>
+              <span id="points6">...</span>
+              <br>
+       
+              <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+                <span id="moreText6">
+                  Satisfied with such a good service, the view, food and everything!<br>
+                  <i class="material-icons">room</i> 9CP2+4HQ, Zaw Jyun Road,<br> Myitkyina<br>
+<br><br>
+            <i class="material-icons">phone</i>•09 44412 300<br><br>
+            <i class="material-icons">hotel</i> MMK 87,000 per night<br>
+             <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 93,000[include breakfast]<br>
+            MMK 180,000[VVIP]<br><br>
+            <i class="material-icons">pool</i>swimming pool<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+            <img src="./photo/pk.png" alt="icon" width="25" height="25">Parking<br><br>
+            <!-- <img src="./photo/child.png" alt="icon" width="25" height="25">Friendly Child<br><br> -->
+
+             <br> <br>Check-in:  14:00<br>Check-out:  12:00  
+                
+                </span>
+            </p>
+      </div>
+  </div>
+
+
+
+</nav>
+
+<!-- end grid -->
+
+
+
+
+  <!-- footer nav start -->
+  <div> <h3 style="font-size:30px;text-align: left;font-family: Calibri;"><a style="color:black;text-decoration: none; margin-left: 20px;text-shadow: 1px 5px 6px gray; " href="home.html">rest&leisure.com</a></h3> 
+    </div>
+    
+<nav id="footer" >
+
+    <div>
+      <table class="tb">
+      <tr>
+        <th>You can find hotels here...</th>
+        <th></th>
+        <th>Contact Us</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td align="left"><a href="hotels.html">Kachin State<br><br>
+          <a href="bago.html" >Bago</a><br><br>
+          <a href="mandalay.html" >Mandalay</a><br><br>
+          <a href="pyinoolwin.html" >Pyinoolwin</a><br><br>
+          <a href="bagan.html" >Bagan</a><br><br>
+          <a href="inlay.html" >Inlay</a><br><br>
+          <a href="taunggyi.html" >Taunggyi</a><br><br>
+          <a href="naypyitaw.html" >Nay Pyi Taw</a><br><br>
+          </a>
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="mailto:rest8leisure@gmail.com"><img src="./photo/mailb.png" class="logoicon">rest8leisure@gmail.com</a>
+          <br><br>
+          <a href="http://www.facebook.com"><img src="./photo/fbb.png" class="logoicon">REST&LEISURE Facebook Page</a>
+          <br><br>
+          <a href="tel:09961454036"><img src="./photo/phb.png" class="logoicon">09-953 994 604</a>
+          <br><br>
+          <a href="tel:05311958"><img src="./photo/phh.png" class="logoicon">053-11958</a>
+        
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="#top"><img src="./photo/up.png" class="logoicon">Up to start of the page</a>
+          <br><br>
+        </td>
+      </tr>
+      
+      </table>
+      <div id="cpyfoot">
+        rest&leisure&nbsp;&copy;copyright 2023 <br>
+
+      </div>
+    </div>
+</nav>
+  <!-- footer nav end -->
+  
+
+ <script type="text/javascript">
+  
+
+  
+
+      window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    // sticky navigation var end
+
+
+
+        function toggleText() {
+ 
+            // Get all the elements from the page
+            let points =
+                document.getElementById("points");
+ 
+            let showMoreText =
+                document.getElementById("moreText");
+ 
+            let buttonText =
+                document.getElementById("textButton");
+ 
+            // If the display property of the dots to be displayed is already set to 'none' (that is hidden) then this section of code triggers
+            if (points.style.display === "none") {
+ 
+                // Hide the text between the span
+                // elements
+                showMoreText.style.display = "none";
+ 
+                // Show the dots after the text
+                points.style.display = "inline";
+ 
+                // Change the text on button to
+                // 'Show More'
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            // If the hidden portion is revealed,
+            // we will change it back to be hidden
+            else {
+ 
+                // Show the text between the
+                // span elements
+                showMoreText.style.display = "inline";
+ 
+                // Hide the dots after the text
+                points.style.display = "none";
+ 
+                // Change the text on button
+                // to 'Show Less'
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+          function toggleText2(){
+            let points =
+                document.getElementById("points2");
+ 
+            let showMoreText =
+                document.getElementById("moreText2");
+ 
+            let buttonText =
+                document.getElementById("textButton2");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+          function toggleText3(){
+            let points =
+                document.getElementById("points3");
+ 
+            let showMoreText =
+                document.getElementById("moreText3");
+ 
+            let buttonText =
+                document.getElementById("textButton3");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText4(){
+            let points =
+                document.getElementById("points4");
+ 
+            let showMoreText =
+                document.getElementById("moreText4");
+ 
+            let buttonText =
+                document.getElementById("textButton4");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText5(){
+            let points =
+                document.getElementById("points5");
+ 
+            let showMoreText =
+                document.getElementById("moreText5");
+ 
+            let buttonText =
+                document.getElementById("textButton5");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText6(){
+            let points =
+                document.getElementById("points6");
+ 
+            let showMoreText =
+                document.getElementById("moreText6");
+ 
+            let buttonText =
+                document.getElementById("textButton6");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+       
+
+
+
+</script>
+    
+  
+</body>
+</html>

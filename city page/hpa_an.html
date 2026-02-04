@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;margin: 0;
+}
+
+body {
+  background-color: lightblue;
+}
+
+  /*    navbar css codes start*/
+
+    #navbar{
+      overflow: hidden;z-index: 100;
+    }
+    #navbar a{
+      color: black;
+      text-align: center;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color.5s;
+      margin: 0;
+    }
+    #navbar a:hover{
+      color:red;
+    }
+
+    .sticky{
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+
+
+/*    navbar css codes end*/
+
+/*image fade in fade out start*/
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 220px;
+  height: 150px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+/*img fade in fade out end*/
+
+/*show more start*/
+  #moreText,#moreText2, #moreText3, #moreText4, #moreText5, #moreText6, #moreText7, #moreText8{
+            /* Display nothing for the element */
+            display: none;
+        }
+
+  #textButton, #textButton2, #textButton3, #textButton4, #textButton5, #textButton6, #textButton7, #textButton8{
+    margin-top:10px ;
+  }
+
+/*show more end*/
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+
+}
+hr{
+  margin-bottom: 20px;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/*footer start*/
+
+  #footer{
+          background:#8da6c2;
+          margin-left: 0px; margin-right: 0;
+          color: black;
+        }
+
+        .tb{
+          text-shadow: 1px 4px 6px gray;
+          border-spacing: 20px;
+        }
+        .tb a{
+          text-decoration: none;
+          color: navy;
+        }
+
+        .tb img{
+          width: 25px;
+          height: 25px;
+        }
+
+    td, th{
+      padding: 50px;
+    }
+
+    #cpyfoot{
+      background: gray;
+      color: black;
+      padding: 10px;
+      text-align: center;
+    }
+    
+/*  footer end*/
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+    <!-- top menu bar start -->
+  <nav id="top">
+
+    <div style="background-color: rgba(255,255,255,0.3); padding: 20px;"  id="navbar"><b style="color: black;font-size: 40px;text-shadow: 1px 3px 5px gray;font-family: 'Changa', sans-serif; ">REST & LEISURE</b>
+      <div style="float:right;padding: 20px;">
+        <a href="home.html" title="Go To Our Home Page">Home |&nbsp;&nbsp;</a>
+        <a href="hotels.html">Hotels&Resorts |&nbsp;&nbsp;</a>
+        <a href="login.html">Login |&nbsp;&nbsp;</a>
+        <a href="register.html">Register |&nbsp;&nbsp;</a>
+        <a href="aboutus.html" >About Us |&nbsp;&nbsp;</a>
+        </div>
+    </div>
+    
+
+  </nav>
+  <!-- top  menu bar end -->
+
+<!-- MAIN (Center website) -->
+<div  class="main" style="margin-top: 120px;">
+
+<h1>HOTELS IN HPA-AN</h1>
+<hr size="10">
+
+<i style="font-size:19px;line-height: 45px;font-weight: bold;">
+ Hpa-an is the capital and largest city of Kayin State, Myanmar. The population of Hpa-an as of the 2014 census was 421,575. Most of the people in Hpa-an are of the Karen ethnic group<br>Hpa-or “frog vomit” as it is translated derives its name from Burmese Buddhist tradition where after the frog ate the large snake he suffered a bit of a stomach reflex in the town, hereby sentencing the town to one of the less poetic but most legendary names of all the cities in Myanmar
+</i>
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./hpaan/hp1.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./hpaan/hp2.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText()" id="textButton">Show More</button>
+      <h3>Thiri Hpa An Hotel<br><b style="color:gold;">&star;&star;&star;&star;</b></h3>
+      <p>
+        <span id="points">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <span id="moreText">
+            <i class="material-icons">room</i>No. 8 Htone I Road Near the Than Lwin Bridge, Hpa An <br><br>
+            <i class="material-icons">phone</i>09421113498<br><br>
+            <i class="material-icons">hotel</i> MMK 70,000 per night<br>
+                        <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 90,000[include breakfast]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 120,000[VVIP]<br><br>
+            <i class="material-icons"><img src="./photo/pk.png" alt="icon" width="25" height="25"></i>Car Parking<br><br>
+            <i class="material-icons"><img src="./photo/luggage.jpg" alt="icon" width="25" height="25"></i>Luggage Storage<br><br>
+
+            <i class="material-icons">pool</i>Outdoor Swimming Pool<br><br>
+            <i class="material-icons"><img src="./photo/meetingroom.jpg" alt="icon" width="25" height="25"></i>Meeting Room<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+             <br>Check-in:  12:30 to 14:00<br>Check-out:  12:00<br><br>
+             <a href="https://g.co/kgs/13pPhc">visit website</a>
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./hpaan/hp3.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./hpaan/hp4.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+            <button onclick="toggleText2()" id="textButton2">Show More</button>
+       <h3>Hotel Gabana<br><b style="color:gold;">&star;&star;&star;</b></h3>
+      <p>
+        <span id="points2">...</span>
+          <span id="moreText2">
+            <i class="material-icons">room</i> B.E.H.S Street, Hpa An<br><br>
+            <i class="material-icons">phone</i>095822425<br><br>
+            <i class="material-icons">hotel</i> MMK 75,000 per night<br>
+                        <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 100,000[include breakfast]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 150,000[VVIP]<br><br>
+            <i class="material-icons"><img src="./photo/pk.png" alt="icon" width="25" height="25"></i>Car Parking<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+             <br>Check-in:  12:30 to 14:00<br>Check-out:  12:00<br><br>
+             <a href="https://www.hpa-anhotelgabbana.com/">visit website</a>
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./hpaan/hp5.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./hpaan/hp6.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText3()" id="textButton3">Show More</button>
+       <h3>Hotel Zwekbain <br><b style="color:gold;">&star;&star;&star;&star;</b></h3>
+      <p>
+        <span id="points3">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <span id="moreText3">
+            <i class="material-icons">room</i>Mawlamyine Road, Hpa An,<br><br>
+            <i class="material-icons">phone</i>09892344122<br><br>
+            <i class="material-icons">hotel</i> MMK 90,000 per night<br>
+                        <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 120,000[include breakfast]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 150,000[VVIP]<br><br>
+            <i class="material-icons"><img src="./photo/pk.png" alt="icon" width="25" height="25"></i>Car Parking<br><br>
+            <i class="material-icons"><img src="./photo/airport.jpg" alt="icon" width="25" height="25"></i>Airport Pick-up Service<br><br>
+            <i class="material-icons"><img src="./photo/luggage.jpg" alt="icon" width="25" height="25"></i>Luggage Storage<br><br>
+            <i class="material-icons"><img src="./photo/ch.png" alt="icon" width="25" height="25"></i>Garden View<br><br>
+            <i class="material-icons">pool</i>Outdoor Swimming Pool<br><br>
+            <i class="material-icons"><img src="./photo/airport.jpg" alt="icon" width="25" height="25"></i>Airport Pick-up Service<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+             <br>Check-in: 14:00<br>Check-out:  12:00<br><br>
+             <a href="https://www.google.com/travel/hotels/s/SRDFAtVqSKCPxcGX9">visit website</a>
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./hpaan/hp7.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./hpaan/hp8.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText4()" id="textButton4">Show More</button>
+       <h3>Hpa-An Lodge Hotel<br><b style="color:gold;">&star;&star;&star;&star;&star;</b></h3>
+      <p>
+        <span id="points4">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <span id="moreText4">
+            <i class="material-icons">room</i>Kabin Road Near Dat-Da-Lun Monastery, Hpa-an <br><br>
+            <i class="material-icons">phone</i>09787543321<br><br>
+            <i class="material-icons">hotel</i> MMK 10,000 per night<br>
+                        <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 120,000[include breakfast]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 150,000[VVIP]<br><br>
+            <i class="material-icons"><img src="./photo/pk.png" alt="icon" width="25" height="25"></i>Car Parking<br><br>
+            <i class="material-icons"><img src="./photo/airport.jpg" alt="icon" width="25" height="25"></i>Airport Pick-up Service<br><br>
+            <i class="material-icons"><img src="./photo/luggage.jpg" alt="icon" width="25" height="25"></i>Luggage Storage<br><br>
+            <i class="material-icons"><img src="./photo/ch.png" alt="icon" width="25" height="25"></i>Garden View<br><br>
+            <i class="material-icons">pool</i>Outdoor Swimming Pool<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+             <br>Check-in:14:00<br>Check-out:  12:00<br><br>
+             <a href="https://g.co/kgs/bTzYb1">visit website</a>
+          </span>
+    </p>
+    </div>
+  </div>
+</div>
+<!-- end grid -->
+<!-- Portfolio Gallery Grid -->
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./hpaan/hp9.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./hpaan/hp10.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText5()" id="textButton5">Show More</button>
+      <h3>Royal  Hotel<br><b style="color:gold;">&star;&star;&star;&star;</b></h3>
+      <p>
+        <span id="points5">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <span id="moreText5">
+            <i class="material-icons">room</i>Thit Taw Ward Taunggyi-Hopone Road<br><br>
+            <i class="material-icons">phone</i>09422353981<br><br>
+            <i class="material-icons">hotel</i> MMK 90,000 per night<br>
+                        <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 120,000[include breakfast]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 150,000[VVIP]<br><br>
+            <i class="material-icons"><img src="./photo/pk.png" alt="icon" width="25" height="25"></i>Car Parking<br><br>
+            <i class="material-icons"><img src="./photo/airport.jpg" alt="icon" width="25" height="25"></i>Airport Pick-up Service<br><br>
+            <i class="material-icons"><img src="./photo/luggage.jpg" alt="icon" width="25" height="25"></i>Luggage Storage<br><br>
+
+            <i class="material-icons">pool</i>Outdoor Swimming Pool<br><br>
+            <i class="material-icons"><img src="./photo/meetingroom.jpg" alt="icon" width="25" height="25"></i>Meeting Room<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+             <br>Check-in:  12:30 to 14:00<br>Check-out:  12:00<br><br>
+             <a href="https://g.co/kgs/QxpfYh">visit website</a>
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./hpaan/hp11.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./hpaan/hp12.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText6()" id="textButton6">Show More</button>
+       <h3>Hotel Queen Jamadevi<br><b style="color:gold;">&star;&star;&star;</b></h3>
+      <p>
+        <span id="points6">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <span id="moreText6">
+            <i class="material-icons">room</i> 127-132, Yarzadiriz Road Myine Tharyar Quarter<br><br>
+            <i class="material-icons">phone</i>0979857783<br><br>
+            <i class="material-icons">hotel</i> MMK 75,000 per night<br>
+                        <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 100,000[include breakfast]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 120,000[VVIP]<br><br>
+            <i class="material-icons"><img src="./photo/pk.png" alt="icon" width="25" height="25"></i>Car Parking<br><br>
+          
+            <i class="material-icons"><img src="./photo/luggage.jpg" alt="icon" width="25" height="25"></i>Luggage Storage<br><br>
+
+            <i class="material-icons"><img src="./photo/meetingroom.jpg" alt="icon" width="25" height="25"></i>Meeting Room<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+             <br>Check-in:  14:00<br>Check-out:  12:00<br><br>
+             <a href="https://www.google.com/search?client=ms-android-samsung-rvo1&sca_esv=562769096&hl=en-US&cs=1&sxsrf=AB5stBgpw5JMEwzYybo-u4nCe3PrxLsMrQ:1693926705991&q=Hotel+Queen+Jamadevi&ludocid=14621302533484858075&ibp=gwp;0,7&lsig=AB86z5VZ3rOxLHH6UOopwnD2HFmv&kgs=8f921fea814e8353&shndl=-1&shem=lbsc,lscsce,lsp&source=sh/x/kp/local/m1/4">visit website</a>
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <div class="container">
+            <img src="./hpaan/hp13.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./hpaan/hp14.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+    <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText7()" id="textButton7">Show More</button>
+       <h3>My Hpa-An Residence by Amata<br><b style="color:gold;">&star;&star;&star;&star;&star;</b></h3>
+      <p>
+        <span id="points7">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <span id="moreText7">
+            <i class="material-icons">room</i> Base of Zwe Ka Bin Mountain, Hpa An<br><br>
+            <i class="material-icons">phone</i>09776543537<br><br>
+            <i class="material-icons">hotel</i> MMK 90,000 per night<br>
+                        <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 120,000[include breakfast]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 150,000[VVIP]<br><br>
+            <i class="material-icons"><img src="./photo/pk.png" alt="icon" width="25" height="25"></i>Car Parking<br><br>
+            <i class="material-icons"><img src="./photo/airport.jpg" alt="icon" width="25" height="25"></i>Airport Pick-up Service<br><br>
+            <i class="material-icons"><img src="./photo/luggage.jpg" alt="icon" width="25" height="25"></i>Luggage Storage<br><br>
+
+            <i class="material-icons">pool</i>Outdoor Swimming Pool<br><br>
+            <i class="material-icons"><img src="./photo/meetingroom.jpg" alt="icon" width="25" height="25"></i>Meeting Room<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+             <br>Check-in: 14:00<br>Check-out:  12:00<br><br>
+             <a href="https://g.co/kgs/oLZTFP">visit website</a>
+          </span>
+    </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <div class="container">
+            <img src="./hpaan/hp15.jpg" class="image" style="width:220px;height:150px;">
+          <div class="overlay">
+            <img src="./hpaan/hp16.jpg" class="image" style="width:220px;height:150px;">
+          </div>
+      </div>
+      <!-- Trigger toggleText() when the button is clicked -->
+            <button onclick="toggleText8()" id="textButton8">Show More</button>
+       <h3>Little Hpa An Hotel<br><b style="color:gold;">&star;&star;&star;</b></h3>
+      <p>
+        <span id="points8">...</span>
+ 
+        <!-- Define the text that would be hidden by default and only shown when clicked on the button -->
+          <span id="moreText8">
+            <i class="material-icons">room</i> 9/1B, Quarter 3, Kutoe Sate, Hpa-An<br><br>
+            <i class="material-icons">phone</i>095122766<br><br>
+            <i class="material-icons">hotel</i> MMK 70,000 per night<br>
+                        <img src="./photo/fs.png" alt="icon" width="25" height="25">MMK 100,000[include breakfast]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMK 120,000[VVIP]<br><br>
+            <i class="material-icons"><img src="./photo/pk.png" alt="icon" width="25" height="25"></i>Car Parking<br><br>
+            <i class="material-icons"><img src="./photo/luggage.jpg" alt="icon" width="25" height="25"></i>Luggage Storage<br><br>
+            <i class="material-icons"><img src="./photo/meetingroom.jpg" alt="icon" width="25" height="25"></i>Meeting Room<br><br>
+            <i class="material-icons">wifi</i>Free WiFi<br><br>
+             <br>Check-in:  12:30 to 14:00<br>Check-out:  12:00<br><br>
+             <a href="https://g.co/kgs/kNPFwR">visit website</a>
+          </span>
+    </p>
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- end grid -->
+
+
+
+
+  <!-- footer nav start -->
+  <div> <h3 style="font-size:30px;text-align: left;font-family: Calibri;"><a style="color:black;text-decoration: none; margin-left: 20px;text-shadow: 1px 5px 6px gray; " href="home.html">rest&leisure.com</a></h3> 
+    </div>
+    
+  <nav id="footer" >
+
+    <div>
+      <table class="tb">
+      <tr>
+        <th>You can find hotels here...</th>
+        <th></th>
+        <th>Contact Us</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td align="left"><a href="hotels.html">Kachin State<br><br>
+          <a href="bago.html" >Bago</a><br><br>
+          <a href="mandalay.html" >Mandalay</a><br><br>
+          <a href="pyinoolwin.html" >Pyinoolwin</a><br><br>
+          <a href="bagan.html" >Bagan</a><br><br>
+          <a href="inlay.html" >Inlay</a><br><br>
+          <a href="taunggyi.html" >Taunggyi</a><br><br>
+          <a href="naypyitaw.html" >Nay Pyi Taw</a><br><br>
+          </a>
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="mailto:rest8leisure@gmail.com"><img src="./photo/mailb.png" class="logoicon">rest8leisure@gmail.com</a>
+          <br><br>
+          <a href="http://www.facebook.com"><img src="./photo/fbb.png" class="logoicon">REST&LEISURE Facebook Page</a>
+          <br><br>
+          <a href="tel:09961454036"><img src="./photo/phb.png" class="logoicon">09-953 994 604</a>
+          <br><br>
+          <a href="tel:05311958"><img src="./photo/phh.png" class="logoicon">053-11958</a>
+        
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="#top"><img src="./photo/up.png" class="logoicon">Up to start of the page</a>
+          <br><br>
+        </td>
+      </tr>
+      
+      </table>
+      <div id="cpyfoot">
+        rest&leisure&nbsp;&copy;copyright 2023 <br>
+
+      </div>
+    </div>
+  </nav>
+  <!-- footer nav end -->
+  
+
+ 
+    <script>
+
+      window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    // sticky navigation var end
+
+
+
+        function toggleText() {
+ 
+            // Get all the elements from the page
+            let points =
+                document.getElementById("points");
+ 
+            let showMoreText =
+                document.getElementById("moreText");
+ 
+            let buttonText =
+                document.getElementById("textButton");
+ 
+            // If the display property of the dots to be displayed is already set to 'none' (that is hidden) then this section of code triggers
+            if (points.style.display === "none") {
+ 
+                // Hide the text between the span
+                // elements
+                showMoreText.style.display = "none";
+ 
+                // Show the dots after the text
+                points.style.display = "inline";
+ 
+                // Change the text on button to
+                // 'Show More'
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            // If the hidden portion is revealed,
+            // we will change it back to be hidden
+            else {
+ 
+                // Show the text between the
+                // span elements
+                showMoreText.style.display = "inline";
+ 
+                // Hide the dots after the text
+                points.style.display = "none";
+ 
+                // Change the text on button
+                // to 'Show Less'
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+          function toggleText2(){
+            let points =
+                document.getElementById("points2");
+ 
+            let showMoreText =
+                document.getElementById("moreText2");
+ 
+            let buttonText =
+                document.getElementById("textButton2");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+          function toggleText3(){
+            let points =
+                document.getElementById("points3");
+ 
+            let showMoreText =
+                document.getElementById("moreText3");
+ 
+            let buttonText =
+                document.getElementById("textButton3");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText4(){
+            let points =
+                document.getElementById("points4");
+ 
+            let showMoreText =
+                document.getElementById("moreText4");
+ 
+            let buttonText =
+                document.getElementById("textButton4");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText5(){
+            let points =
+                document.getElementById("points5");
+ 
+            let showMoreText =
+                document.getElementById("moreText5");
+ 
+            let buttonText =
+                document.getElementById("textButton5");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText6(){
+            let points =
+                document.getElementById("points6");
+ 
+            let showMoreText =
+                document.getElementById("moreText6");
+ 
+            let buttonText =
+                document.getElementById("textButton6");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText7(){
+            let points =
+                document.getElementById("points7");
+ 
+            let showMoreText =
+                document.getElementById("moreText7");
+ 
+            let buttonText =
+                document.getElementById("textButton7");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+
+        function toggleText8(){
+            let points =
+                document.getElementById("points8");
+ 
+            let showMoreText =
+                document.getElementById("moreText8");
+ 
+            let buttonText =
+                document.getElementById("textButton8");
+            if (points.style.display === "none") {
+                showMoreText.style.display = "none";
+                points.style.display = "inline";
+                buttonText.innerHTML = "Show More";
+            }
+ 
+            else {
+                showMoreText.style.display = "inline";
+                points.style.display = "none";
+                buttonText.innerHTML = "Show Less";
+            }
+        }
+    </script>
+  
+</body>
+</html>

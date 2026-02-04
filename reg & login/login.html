@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style type="text/css">
+
+  *{margin: 0}
+	/*    navbar css codes start*/
+
+    #navbar{
+      overflow: hidden;z-index: 100;
+    }
+    #navbar a{
+      color: black;
+      text-align: center;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color.5s;
+    }
+    #navbar a:hover{
+      color:red;
+    }
+
+    .sticky{
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+  /*    navbar css codes end*/
+  body{
+  	background-color:skyblue;
+
+  }
+  table{
+  	margin-top: 40px;
+  	margin-left: 80px;
+  	margin-bottom: 20px;
+  }
+  img{
+  	height:470px;
+  	width: 550px;
+  }
+  h2{
+  	margin-top: 2px;
+	text-align: center;
+    font-size: 28px;
+    font-family:Arial;
+    color:black;
+    letter-spacing:13px;
+}
+#t{
+	background-image: url(./photo/b1.jpg);
+	background-attachment: fixed;
+}
+form{
+		text-align: center;
+		margin-right: 180px;
+		width: 100%;
+		height: 80%;
+		margin-top: 10px;
+		border-spacing: 30px;
+	}
+	input{
+     cell-padding: 80px;
+     width: 280px;
+     height: 40px;
+     margin-right:40px ;
+     margin-left: 30px;
+     margin-top: 20px;
+     cursor: pointer;
+	}
+	input:hover{
+		background-color:#DFFDFF;
+
+	}
+	button{
+     width: 80px;
+     height: 30px;
+     margin-top: 40px;
+     border-radius:8px;
+     text-align: center;
+     cursor: pointer;
+     background-color:#DFFDFF;
+	}
+  button:hover{
+    background-color:#FFF18D;
+  }
+
+  /*footer start*/
+
+  #footer{
+          background:#8da6c2;
+/*          margin-top: 240px;*/
+          color: black;
+        }
+
+        .tb{
+          text-shadow: 1px 4px 6px gray;
+          border-spacing: 20px;
+        }
+        .tb a{
+          text-decoration: none;
+          color: navy;
+        }
+
+        .tb img{
+          width: 25px;
+          height: 25px;
+        }
+
+    .tb td,.tb th{
+      padding: 50px;
+    }
+
+    #cpyfoot{
+      background: gray;
+      color: black;
+      padding: 10px;
+      text-align: center;
+    }
+    
+/*  footer end*/
+</style>
+<body>
+	<!-- top menu bar start -->
+  <nav id="top">
+
+    <div style="background-color:rgba(255,255,255,0.3); padding: 20px;"  id="navbar"><b style="color: black;font-size: 40px;text-shadow: 1px 3px 5px gray;font-family: 'Changa', sans-serif; ">REST & LEISURE</b>
+      <div style="float:right;padding: 20px;">
+        <a href="home.html" title="Go To Our Home Page">Home |&nbsp;&nbsp;</a>
+        <a href="hotels.html">Hotels&Resorts |&nbsp;&nbsp;</a>
+        <a href="login.html">Login |&nbsp;&nbsp;</a>
+        <a href="register.html">Register |&nbsp;&nbsp;</a>
+        <a href="aboutus.html" >About Us |&nbsp;&nbsp;</a>
+        </div>
+    </div>
+</nav>
+
+    <!-- top  menu bar end -->
+    <table style="margin: 100px;">
+    	<tr>
+    		<td><img src="./photo/b2.jpg"></td>
+    		<td id="t">
+    			<form action="hotels.html">
+    				<h2>LOGIN</h2>
+				<input type="email" id="ema" placeholder="Email"><br>
+				<input type="password" id="pwd1" placeholder="Password"><br>
+				<button id="button" onClick="sign()">Submit</button>
+    			</form>
+    		</td>
+    	</tr>
+    </table>
+</form>
+  
+  
+  
+
+
+  <!-- footer nav start -->
+  <div> <h3 style="font-size:30px;text-align: left;font-family: Calibri;"><a style="color:black;text-decoration: none; margin-left: 20px;text-shadow: 1px 5px 6px gray; " href="home.html">rest&leisure.com</a></h3> 
+    </div>
+    
+  <nav id="footer">
+
+    <div>
+      <table class="tb">
+      <tr>
+        <th>You can find hotels here...</th>
+        <th></th>
+        <th>Contact Us</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td align="left"><a href="hotels.html">Kachin State<br><br>
+          <a href="bago.html" >Bago</a><br><br>
+          <a href="mandalay.html" >Mandalay</a><br><br>
+          <a href="pyinoolwin.html" >Pyinoolwin</a><br><br>
+          <a href="bagan.html" >Bagan</a><br><br>
+          <a href="inlay.html" >Inlay</a><br><br>
+          <a href="taunggyi.html" >Taunggyi</a><br><br>
+          <a href="naypyitaw.html" >Nay Pyi Taw</a><br><br>
+          </a>
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="mailto:rest8leisure@gmail.com"><img src="./photo/mailb.png" class="logoicon">rest8leisure@gmail.com</a>
+          <br><br>
+          <a href="http://www.facebook.com"><img src="./photo/fbb.png" class="logoicon">REST&LEISURE Facebook Page</a>
+          <br><br>
+          <a href="tel:09961454036"><img src="./photo/phb.png" class="logoicon">09-953 994 604</a>
+          <br><br>
+          <a href="tel:05311958"><img src="./photo/phh.png" class="logoicon">053-11958</a>
+        
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          <a href="#top"><img src="./photo/up.png" class="logoicon">Up to start of the page</a>
+          <br><br>
+        </td>
+      </tr>
+      
+      </table>
+      <div id="cpyfoot">
+        rest&leisure&nbsp;&copy;copyright 2023 <br>
+
+      </div>
+    </div>
+  </nav>
+  <!-- footer nav end -->
+
+
+  
+
+
+
+<script type="text/javascript">
+	window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    // sticky navigation var end
+
+    
+   function sign(){
+   	var n=document.getElementById("ema").value;
+   	var p=document.getElementById("pwd1").value;
+   	var emailt=/[A-Za-z0-9]{3,}@[ge](mail)\.[A-Za-z]{3}/;
+    var pwdt=/[0-9]{6,}/;
+   	if(n=='')
+        {
+            alert("Please enter email");
+        }
+        else if(!emailt.test(n))
+        {
+            alert("sample@gmail.com");
+        }
+        else if(p=='')
+        {
+            alert('Please enter Password');
+        }
+        else if(!pwdt.test(p))
+        {
+            alert ('Password must be contained 6 numbers');
+        }
+         else
+        {                                           
+               alert('Login Successful');
+               var a=document.createElement('a');
+               a.href="hotels.html";
+       }
+
+           }
+</script>
+</body>
+</html>
